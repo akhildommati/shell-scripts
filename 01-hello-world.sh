@@ -5,3 +5,4 @@ echo "Hello, World!"
 
 # End of script
 echo "Script execution completed."
+echo "hello"
