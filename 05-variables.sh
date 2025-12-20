@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Please enter your userrname:" # prompt for user input
+echo "Please enter your username:" # prompt for user input
 
 read -s USERNAME # here username is the variable to store input
 
