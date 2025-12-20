@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+# Get person names from command line arguments
+# can supply names while running script like: bash 04-variables.sh Akhil Meghana
+# If no names are supplied, variables will be empty
+
 PERSON1=$1 # no space before and after equal
 PERSON2=$2
 
