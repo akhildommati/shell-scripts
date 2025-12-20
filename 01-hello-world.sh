@@ -4,3 +4,4 @@ echo "Hello, World!"
 # To run this script, use the command: bash 01-hello-world.sh
 
 # End of script
+echo "Script execution completed."
