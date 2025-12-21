@@ -6,4 +6,4 @@ then
     echo "ERROR :: Please run this script as root or using sudo."
 fi
 
-dnf install mysqll -y
+dnf install mysql -y
