@@ -7,7 +7,7 @@ then
     exit 1 #other than 0 means error
 fi
 
-dnf install mysqll -y
+dnf install mysql -y
 
 if [ $? -ne 0 ]
 then
