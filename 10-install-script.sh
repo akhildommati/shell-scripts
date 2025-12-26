@@ -36,6 +36,7 @@ dnf install mysql -y
 
 
 dnf list installed git
+
 if [$? -ne 0] # not installed
 then
     dnf install git -y
