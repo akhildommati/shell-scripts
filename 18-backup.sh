@@ -44,4 +44,9 @@ then
     exit 1
 fi
 
+if [ ! -d $DEST_DIR ]
+then
+    echo -e "$Y WARNING: Destination directory $DEST_DIR does not exist. $N
+    exit 1
+fi
 echo "Script started executed at: $TIMESTAMP" &>>$LOG_FILE_NAME
