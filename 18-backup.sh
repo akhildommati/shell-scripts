@@ -57,6 +57,6 @@ echo "Files to be backed up: $FILES"
 
 if [ -z "$FILES" ]
 then
-    echo "No files older than $DAYS days to back up." &>>$LOG_FILE_NAME
+    echo "No files found older than $DAYS days to back up."
     exit 0
 fi
