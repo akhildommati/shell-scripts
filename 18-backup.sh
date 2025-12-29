@@ -33,7 +33,7 @@ mkdir -p /home/ec2-user/shellscipt-logs/
 if [ $# -lt 2 ]
 then
     USAGE
-
+    exit 1
 fi
 
 echo "Script started executed at: $TIMESTAMP" &>>$LOG_FILE_NAME
