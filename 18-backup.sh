@@ -28,10 +28,12 @@ USAGE(){
     echo -e "$R USAGE:: $N sh 18-backup.sh <SOURCE_DIRECTORY> <DESTINATION_DIRECTORY> [DAYS_OLD]"
 }
 
-if [$# -lt 2 ]
+mkdir -p /home/ec2-user/shellscipt-logs/
+
+if [ $# -lt 2 ]
 then
-    echo -e "$R ERROR: Please provide SOURCE and DESTINATION directories as arguments. $N"
-    exit 1
+    USAGE
+
 fi
 
 echo "Script started executed at: $TIMESTAMP" &>>$LOG_FILE_NAME
