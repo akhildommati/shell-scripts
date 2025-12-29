@@ -55,8 +55,12 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
 echo "Files to be backed up: $FILES"
 
-if [ -z "$FILES" ]
+if [ -n "$FILES" ]
 then
+    echo "Files are : $FILES"
+    ZIP_FILE=$DEST_DIR/akhil-logs-$TIMESTAMP.zip
+    find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "ZIP_FILE"
+
+ else   
     echo "No files found older than $DAYS days to back up."
-    exit 0
 fi
