@@ -49,16 +49,17 @@ echo "Files to be backed up: $FILES"
 if [ -n "$FILES" ]
 then
     echo "Files are : $FILES"
-    ZIP_FILE=$DEST_DIR/akhil-logs-$TIMESTAMP.zip
+    ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "ZIP_FILE"
-    if [ -f "ZIP_FILE" ]
+    if [ -f "$ZIP_FILE" ]
     then
-        echo -e "Successfully created Zip file older than $DAYS days at location: $ZIP_FILE"
-    while read -r file
+        echo -e "Successfully created Zip file older than $DAYS"
+    while read -r filepath
     do 
-    echo "Deleting file: $file" 
-    rm -rf $file 
-    done <<< $FILES_TO_DELETE
+    echo "Deleting file: $filepath" 
+    rm -rf $filepath
+    echo "Deleted file: $filepath"
+    done <<< $FILES
     else
         echo -e "$R ERROR: $N Failed to create Zip file"
         exit 1
