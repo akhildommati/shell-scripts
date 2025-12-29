@@ -55,3 +55,8 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
 echo "Files to be backed up: $FILES"
 
+if [ -z "$FILES" ]
+then
+    echo "No files older than $DAYS days to back up." &>>$LOG_FILE_NAME
+    exit 0
+fi
