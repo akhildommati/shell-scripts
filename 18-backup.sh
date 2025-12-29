@@ -26,6 +26,7 @@ VALIDATE(){
 
 USAGE(){
     echo -e "$R USAGE:: $N sh 18-backup.sh <SOURCE_DIRECTORY> <DESTINATION_DIRECTORY> [DAYS_OLD]"
+    exit 1
 }
 
 mkdir -p /home/ec2-user/shellscipt-logs/
