@@ -37,4 +37,11 @@ then
     exit 1
 fi
 
+if [ ! -d $SOURCE_DIR ]
+then
+    echo -e "$R ERROR: Source directory $SOURCE_DIR does not exist. $N"
+    USAGE
+    exit 1
+fi
+
 echo "Script started executed at: $TIMESTAMP" &>>$LOG_FILE_NAME
