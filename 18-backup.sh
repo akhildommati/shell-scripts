@@ -21,7 +21,7 @@ USAGE(){
 }
 
 mkdir -"p /home/ec2-user/shellscript-logs/
-echo "File name : $0"
+echo "Filename: $0"
 if [ $# -lt 2 ]
 then
     USAGE
