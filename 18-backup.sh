@@ -20,8 +20,8 @@ USAGE(){
     exit 1
 }
 
-mkdir -p /home/ec2-user/shellscript-logs/
-
+mkdir -"p /home/ec2-user/shellscript-logs/
+echo "File name : $0"
 if [ $# -lt 2 ]
 then
     USAGE
@@ -56,11 +56,11 @@ then
         echo -e "Successfully created Zip file older than $DAYS"
     while read -r filepath
     do 
-    echo "Deleting file: $filepath" 
-    rm -rf $filepath
-    echo "Deleted file: $filepath"
+        echo "Deleting file: $filepath" 
+        rm -rf $filepath
+        echo "Deleted file: $filepath"
     done <<< $FILES
-    else
+ else
         echo -e "$R ERROR: $N Failed to create Zip file"
         exit 1
     fi
